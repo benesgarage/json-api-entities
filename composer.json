@@ -1,0 +1,16 @@
+{
+    "name": "benesgarage/json-api-entities",
+    "description": "Lightweight library to represent JSON-API structures OOP-style.",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "benesgarage",
+            "email": "benesbigkay@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"JsonAPI\\": "src/"}
+    },    "require": {}
+
+}
