@@ -39,3 +39,4 @@ Thumbs.db
 # Workspace files #
 ###################
 .idea/
+vendor/
