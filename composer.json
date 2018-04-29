@@ -11,6 +11,8 @@
     ],
     "autoload": {
         "psr-4": {"JsonAPI\\": "src/"}
-    },    "require": {}
-
+    },    "require": {},
+    "require-dev": {
+        "codeception/codeception": "^2.4"
+    }
 }
