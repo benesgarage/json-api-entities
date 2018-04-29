@@ -6,6 +6,7 @@ class Links
 {
     const SELF_FIELD    = 'self';
     const RELATED_FIELD = 'related';
+    const ABOUT_FIELD   = 'about';
     const FIRST_FIELD   = 'first';
     const LAST_FIELD    = 'last';
     const PREV_FIELD    = 'prev';
@@ -14,6 +15,8 @@ class Links
     public $self;
 
     public $related;
+
+    public $about;
 
     public $first;
 

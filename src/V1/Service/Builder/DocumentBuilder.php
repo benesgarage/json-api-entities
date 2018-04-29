@@ -2,13 +2,13 @@
 
 namespace JsonAPI\V1\Service\Builder;
 
-use JsonAPI\V1\Entity\{Document, Request};
+use JsonAPI\V1\Entity\Document;
 
-class RequestBuilder
+class DocumentBuilder
 {
-    public static function build(array $payload) : Request
+    public static function build(array $payload) : Document
     {
-        $request = new Request();
+        $request = new Document();
 
         $request->data     = static::buildData($payload);
         $request->included = static::buildIncluded($payload);
@@ -23,6 +23,10 @@ class RequestBuilder
 
         $request->links = array_key_exists(Document::LINKS_FIELD, $payload) ?
             LinksBuilder::build($payload[Document::LINKS_FIELD]) :
+            null;
+
+        $request->errors = array_key_exists(Document::ERRORS_FIELD, $payload) ?
+            ErrorsBuilder::build($payload[Document::ERRORS_FIELD]) :
             null;
 
         return $request;

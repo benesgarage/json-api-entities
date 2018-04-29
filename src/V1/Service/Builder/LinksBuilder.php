@@ -20,6 +20,9 @@ class LinksBuilder
         $links->related = array_key_exists(Links::RELATED_FIELD, $payload) ?
             LinkBuilder::build($payload[Links::RELATED_FIELD]) :
             null;
+        $links->about = array_key_exists(Links::ABOUT_FIELD, $payload) ?
+            LinkBuilder::build($payload[Links::ABOUT_FIELD]) :
+            null;
         $links->first = array_key_exists(Links::FIRST_FIELD, $payload) ?
             LinkBuilder::build($payload[Links::FIRST_FIELD]) :
             null;

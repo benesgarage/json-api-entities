@@ -3,7 +3,7 @@
 namespace JsonAPI\V1\Entity;
 
 
-abstract class Document
+class Document
 {
     const DATA_FIELD     = 'data';
     const ERRORS_FIELD   = 'errors';
@@ -17,4 +17,13 @@ abstract class Document
 
     /** @var Meta */
     public $meta;
+
+    /** @var JsonAPI */
+    public $jsonAPI;
+
+    public $links;
+
+    public $included;
+
+    public $errors;
 }
